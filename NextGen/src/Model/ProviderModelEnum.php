@@ -40,24 +40,6 @@ enum ProviderModelEnum: string
     case AUTHENTIK_PROVIDERS_GOOGLE_WORKSPACE_GOOGLEWORKSPACEPROVIDER = 'authentik_providers_google_workspace.googleworkspaceprovider';
 
     case AUTHENTIK_PROVIDERS_LDAP_LDAPPROVIDER = 'authentik_providers_ldap.ldapprovider';
-
-    case AUTHENTIK_PROVIDERS_MICROSOFT_ENTRA_MICROSOFTENTRAPROVIDER = 'authentik_providers_microsoft_entra.microsoftentraprovider';
-
-    case AUTHENTIK_PROVIDERS_OAUTH2_OAUTH2PROVIDER = 'authentik_providers_oauth2.oauth2provider';
-
-    case AUTHENTIK_PROVIDERS_PROXY_PROXYPROVIDER = 'authentik_providers_proxy.proxyprovider';
-
-    case AUTHENTIK_PROVIDERS_RAC_RACPROVIDER = 'authentik_providers_rac.racprovider';
-
-    case AUTHENTIK_PROVIDERS_RADIUS_RADIUSPROVIDER = 'authentik_providers_radius.radiusprovider';
-
-    case AUTHENTIK_PROVIDERS_SAML_SAMLPROVIDER = 'authentik_providers_saml.samlprovider';
-
-    case AUTHENTIK_PROVIDERS_SCIM_SCIMPROVIDER = 'authentik_providers_scim.scimprovider';
-
-    case AUTHENTIK_PROVIDERS_SSF_SSFPROVIDER = 'authentik_providers_ssf.ssfprovider';
-
-    case AUTHENTIK_PROVIDERS_WS_FEDERATION_WSFEDERATIONPROVIDER = 'authentik_providers_ws_federation.wsfederationprovider';
 }
 
 

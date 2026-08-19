@@ -86,13 +86,4 @@ class TransactionApplicationResponseTest extends TestCase
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
-
-    /**
-     * Test attribute "logs"
-     */
-    public function testPropertyLogs()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
 }

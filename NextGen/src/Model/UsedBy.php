@@ -60,11 +60,9 @@ class UsedBy implements ModelInterface, ArrayAccess, JsonSerializable
      * @var array<string, string>
      */
     protected static array $openAPITypes = [
-        'app' => 'string',
         'model_name' => 'string',
         'pk' => 'string',
-        'name' => 'string',
-        'action' => '\AuthentikApi\NextGen\Model\UsedByActionEnum'
+        'name' => 'string'
     ];
 
     /**
@@ -73,11 +71,9 @@ class UsedBy implements ModelInterface, ArrayAccess, JsonSerializable
      * @var array<string, string|null>
      */
     protected static array $openAPIFormats = [
-        'app' => null,
         'model_name' => null,
         'pk' => null,
-        'name' => null,
-        'action' => null
+        'name' => null
     ];
 
     /**
@@ -86,11 +82,9 @@ class UsedBy implements ModelInterface, ArrayAccess, JsonSerializable
      * @var array<string, bool>
      */
     protected static array $openAPINullables = [
-        'app' => false,
         'model_name' => false,
         'pk' => false,
-        'name' => false,
-        'action' => false
+        'name' => false
     ];
 
     /**
@@ -169,11 +163,9 @@ class UsedBy implements ModelInterface, ArrayAccess, JsonSerializable
      * @var array<string, string>
      */
     protected static array $attributeMap = [
-        'app' => 'app',
         'model_name' => 'model_name',
         'pk' => 'pk',
-        'name' => 'name',
-        'action' => 'action'
+        'name' => 'name'
     ];
 
     /**
@@ -182,11 +174,9 @@ class UsedBy implements ModelInterface, ArrayAccess, JsonSerializable
      * @var array<string, string>
      */
     protected static array $setters = [
-        'app' => 'setApp',
         'model_name' => 'setModelName',
         'pk' => 'setPk',
-        'name' => 'setName',
-        'action' => 'setAction'
+        'name' => 'setName'
     ];
 
     /**
@@ -195,11 +185,9 @@ class UsedBy implements ModelInterface, ArrayAccess, JsonSerializable
      * @var array<string, string>
      */
     protected static array $getters = [
-        'app' => 'getApp',
         'model_name' => 'getModelName',
         'pk' => 'getPk',
-        'name' => 'getName',
-        'action' => 'getAction'
+        'name' => 'getName'
     ];
 
     /**
@@ -249,11 +237,9 @@ class UsedBy implements ModelInterface, ArrayAccess, JsonSerializable
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('app', $data ?? [], null);
         $this->setIfExists('model_name', $data ?? [], null);
         $this->setIfExists('pk', $data ?? [], null);
         $this->setIfExists('name', $data ?? [], null);
-        $this->setIfExists('action', $data ?? [], null);
     }
 
     /**
@@ -281,9 +267,6 @@ class UsedBy implements ModelInterface, ArrayAccess, JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['app'] === null) {
-            $invalidProperties[] = "'app' can't be null";
-        }
         if ($this->container['model_name'] === null) {
             $invalidProperties[] = "'model_name' can't be null";
         }
@@ -292,9 +275,6 @@ class UsedBy implements ModelInterface, ArrayAccess, JsonSerializable
         }
         if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
-        }
-        if ($this->container['action'] === null) {
-            $invalidProperties[] = "'action' can't be null";
         }
         return $invalidProperties;
     }
@@ -307,33 +287,6 @@ class UsedBy implements ModelInterface, ArrayAccess, JsonSerializable
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets app
-     *
-     * @return string
-     */
-    public function getApp(): string
-    {
-        return $this->container['app'];
-    }
-
-    /**
-     * Sets app
-     *
-     * @param string $app app
-     *
-     * @return $this
-     */
-    public function setApp(string $app): static
-    {
-        if (is_null($app)) {
-            throw new InvalidArgumentException('non-nullable app cannot be null');
-        }
-        $this->container['app'] = $app;
-
-        return $this;
-    }
 
     /**
      * Gets model_name
@@ -412,33 +365,6 @@ class UsedBy implements ModelInterface, ArrayAccess, JsonSerializable
             throw new InvalidArgumentException('non-nullable name cannot be null');
         }
         $this->container['name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * Gets action
-     *
-     * @return \AuthentikApi\NextGen\Model\UsedByActionEnum
-     */
-    public function getAction(): \AuthentikApi\NextGen\Model\UsedByActionEnum
-    {
-        return $this->container['action'];
-    }
-
-    /**
-     * Sets action
-     *
-     * @param \AuthentikApi\NextGen\Model\UsedByActionEnum $action action
-     *
-     * @return $this
-     */
-    public function setAction(\AuthentikApi\NextGen\Model\UsedByActionEnum $action): static
-    {
-        if (is_null($action)) {
-            throw new InvalidArgumentException('non-nullable action cannot be null');
-        }
-        $this->container['action'] = $action;
 
         return $this;
     }

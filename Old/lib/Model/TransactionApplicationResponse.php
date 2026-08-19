@@ -59,8 +59,7 @@ class TransactionApplicationResponse implements ModelInterface, ArrayAccess, \Js
      * @var string[]
      */
     protected static $openAPITypes = [
-        'applied' => 'bool',
-        'logs' => 'string[]'
+        'applied' => 'bool'
     ];
 
     /**
@@ -71,8 +70,7 @@ class TransactionApplicationResponse implements ModelInterface, ArrayAccess, \Js
      * @psalm-var array<string, string|null>
      */
     protected static $openAPIFormats = [
-        'applied' => null,
-        'logs' => null
+        'applied' => null
     ];
 
     /**
@@ -81,8 +79,7 @@ class TransactionApplicationResponse implements ModelInterface, ArrayAccess, \Js
      * @var boolean[]
      */
     protected static array $openAPINullables = [
-        'applied' => false,
-        'logs' => false
+        'applied' => false
     ];
 
     /**
@@ -171,8 +168,7 @@ class TransactionApplicationResponse implements ModelInterface, ArrayAccess, \Js
      * @var string[]
      */
     protected static $attributeMap = [
-        'applied' => 'applied',
-        'logs' => 'logs'
+        'applied' => 'applied'
     ];
 
     /**
@@ -181,8 +177,7 @@ class TransactionApplicationResponse implements ModelInterface, ArrayAccess, \Js
      * @var string[]
      */
     protected static $setters = [
-        'applied' => 'setApplied',
-        'logs' => 'setLogs'
+        'applied' => 'setApplied'
     ];
 
     /**
@@ -191,8 +186,7 @@ class TransactionApplicationResponse implements ModelInterface, ArrayAccess, \Js
      * @var string[]
      */
     protected static $getters = [
-        'applied' => 'getApplied',
-        'logs' => 'getLogs'
+        'applied' => 'getApplied'
     ];
 
     /**
@@ -253,7 +247,6 @@ class TransactionApplicationResponse implements ModelInterface, ArrayAccess, \Js
     public function __construct(?array $data = null)
     {
         $this->setIfExists('applied', $data ?? [], null);
-        $this->setIfExists('logs', $data ?? [], null);
     }
 
     /**
@@ -285,9 +278,6 @@ class TransactionApplicationResponse implements ModelInterface, ArrayAccess, \Js
 
         if ($this->container['applied'] === null) {
             $invalidProperties[] = "'applied' can't be null";
-        }
-        if ($this->container['logs'] === null) {
-            $invalidProperties[] = "'logs' can't be null";
         }
         return $invalidProperties;
     }
@@ -327,33 +317,6 @@ class TransactionApplicationResponse implements ModelInterface, ArrayAccess, \Js
             throw new \InvalidArgumentException('non-nullable applied cannot be null');
         }
         $this->container['applied'] = $applied;
-
-        return $this;
-    }
-
-    /**
-     * Gets logs
-     *
-     * @return string[]
-     */
-    public function getLogs()
-    {
-        return $this->container['logs'];
-    }
-
-    /**
-     * Sets logs
-     *
-     * @param string[] $logs logs
-     *
-     * @return self
-     */
-    public function setLogs($logs)
-    {
-        if (is_null($logs)) {
-            throw new \InvalidArgumentException('non-nullable logs cannot be null');
-        }
-        $this->container['logs'] = $logs;
 
         return $this;
     }

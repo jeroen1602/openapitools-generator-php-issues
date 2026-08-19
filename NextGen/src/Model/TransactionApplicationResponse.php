@@ -60,8 +60,7 @@ class TransactionApplicationResponse implements ModelInterface, ArrayAccess, Jso
      * @var array<string, string>
      */
     protected static array $openAPITypes = [
-        'applied' => 'bool',
-        'logs' => 'string[]'
+        'applied' => 'bool'
     ];
 
     /**
@@ -70,8 +69,7 @@ class TransactionApplicationResponse implements ModelInterface, ArrayAccess, Jso
      * @var array<string, string|null>
      */
     protected static array $openAPIFormats = [
-        'applied' => null,
-        'logs' => null
+        'applied' => null
     ];
 
     /**
@@ -80,8 +78,7 @@ class TransactionApplicationResponse implements ModelInterface, ArrayAccess, Jso
      * @var array<string, bool>
      */
     protected static array $openAPINullables = [
-        'applied' => false,
-        'logs' => false
+        'applied' => false
     ];
 
     /**
@@ -160,8 +157,7 @@ class TransactionApplicationResponse implements ModelInterface, ArrayAccess, Jso
      * @var array<string, string>
      */
     protected static array $attributeMap = [
-        'applied' => 'applied',
-        'logs' => 'logs'
+        'applied' => 'applied'
     ];
 
     /**
@@ -170,8 +166,7 @@ class TransactionApplicationResponse implements ModelInterface, ArrayAccess, Jso
      * @var array<string, string>
      */
     protected static array $setters = [
-        'applied' => 'setApplied',
-        'logs' => 'setLogs'
+        'applied' => 'setApplied'
     ];
 
     /**
@@ -180,8 +175,7 @@ class TransactionApplicationResponse implements ModelInterface, ArrayAccess, Jso
      * @var array<string, string>
      */
     protected static array $getters = [
-        'applied' => 'getApplied',
-        'logs' => 'getLogs'
+        'applied' => 'getApplied'
     ];
 
     /**
@@ -232,7 +226,6 @@ class TransactionApplicationResponse implements ModelInterface, ArrayAccess, Jso
     public function __construct(?array $data = null)
     {
         $this->setIfExists('applied', $data ?? [], null);
-        $this->setIfExists('logs', $data ?? [], null);
     }
 
     /**
@@ -262,9 +255,6 @@ class TransactionApplicationResponse implements ModelInterface, ArrayAccess, Jso
 
         if ($this->container['applied'] === null) {
             $invalidProperties[] = "'applied' can't be null";
-        }
-        if ($this->container['logs'] === null) {
-            $invalidProperties[] = "'logs' can't be null";
         }
         return $invalidProperties;
     }
@@ -301,33 +291,6 @@ class TransactionApplicationResponse implements ModelInterface, ArrayAccess, Jso
             throw new InvalidArgumentException('non-nullable applied cannot be null');
         }
         $this->container['applied'] = $applied;
-
-        return $this;
-    }
-
-    /**
-     * Gets logs
-     *
-     * @return string[]
-     */
-    public function getLogs(): array
-    {
-        return $this->container['logs'];
-    }
-
-    /**
-     * Sets logs
-     *
-     * @param string[] $logs logs
-     *
-     * @return $this
-     */
-    public function setLogs(array $logs): static
-    {
-        if (is_null($logs)) {
-            throw new InvalidArgumentException('non-nullable logs cannot be null');
-        }
-        $this->container['logs'] = $logs;
 
         return $this;
     }

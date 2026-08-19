@@ -60,10 +60,8 @@ class TransactionApplicationRequest implements ModelInterface, ArrayAccess, Json
      * @var array<string, string>
      */
     protected static array $openAPITypes = [
-        'app' => '\AuthentikApi\NextGen\Model\ApplicationRequest',
         'provider_model' => '\AuthentikApi\NextGen\Model\ProviderModelEnum',
-        'provider' => '\AuthentikApi\NextGen\Model\ModelRequest',
-        'policy_bindings' => '\AuthentikApi\NextGen\Model\TransactionPolicyBindingRequest[]'
+        'provider' => '\AuthentikApi\NextGen\Model\ModelRequest'
     ];
 
     /**
@@ -72,10 +70,8 @@ class TransactionApplicationRequest implements ModelInterface, ArrayAccess, Json
      * @var array<string, string|null>
      */
     protected static array $openAPIFormats = [
-        'app' => null,
         'provider_model' => null,
-        'provider' => null,
-        'policy_bindings' => null
+        'provider' => null
     ];
 
     /**
@@ -84,10 +80,8 @@ class TransactionApplicationRequest implements ModelInterface, ArrayAccess, Json
      * @var array<string, bool>
      */
     protected static array $openAPINullables = [
-        'app' => false,
         'provider_model' => false,
-        'provider' => false,
-        'policy_bindings' => false
+        'provider' => false
     ];
 
     /**
@@ -166,10 +160,8 @@ class TransactionApplicationRequest implements ModelInterface, ArrayAccess, Json
      * @var array<string, string>
      */
     protected static array $attributeMap = [
-        'app' => 'app',
         'provider_model' => 'provider_model',
-        'provider' => 'provider',
-        'policy_bindings' => 'policy_bindings'
+        'provider' => 'provider'
     ];
 
     /**
@@ -178,10 +170,8 @@ class TransactionApplicationRequest implements ModelInterface, ArrayAccess, Json
      * @var array<string, string>
      */
     protected static array $setters = [
-        'app' => 'setApp',
         'provider_model' => 'setProviderModel',
-        'provider' => 'setProvider',
-        'policy_bindings' => 'setPolicyBindings'
+        'provider' => 'setProvider'
     ];
 
     /**
@@ -190,10 +180,8 @@ class TransactionApplicationRequest implements ModelInterface, ArrayAccess, Json
      * @var array<string, string>
      */
     protected static array $getters = [
-        'app' => 'getApp',
         'provider_model' => 'getProviderModel',
-        'provider' => 'getProvider',
-        'policy_bindings' => 'getPolicyBindings'
+        'provider' => 'getProvider'
     ];
 
     /**
@@ -243,10 +231,8 @@ class TransactionApplicationRequest implements ModelInterface, ArrayAccess, Json
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('app', $data ?? [], null);
         $this->setIfExists('provider_model', $data ?? [], null);
         $this->setIfExists('provider', $data ?? [], null);
-        $this->setIfExists('policy_bindings', $data ?? [], null);
     }
 
     /**
@@ -274,9 +260,6 @@ class TransactionApplicationRequest implements ModelInterface, ArrayAccess, Json
     {
         $invalidProperties = [];
 
-        if ($this->container['app'] === null) {
-            $invalidProperties[] = "'app' can't be null";
-        }
         if ($this->container['provider_model'] === null) {
             $invalidProperties[] = "'provider_model' can't be null";
         }
@@ -294,33 +277,6 @@ class TransactionApplicationRequest implements ModelInterface, ArrayAccess, Json
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets app
-     *
-     * @return \AuthentikApi\NextGen\Model\ApplicationRequest
-     */
-    public function getApp(): \AuthentikApi\NextGen\Model\ApplicationRequest
-    {
-        return $this->container['app'];
-    }
-
-    /**
-     * Sets app
-     *
-     * @param \AuthentikApi\NextGen\Model\ApplicationRequest $app app
-     *
-     * @return $this
-     */
-    public function setApp(\AuthentikApi\NextGen\Model\ApplicationRequest $app): static
-    {
-        if (is_null($app)) {
-            throw new InvalidArgumentException('non-nullable app cannot be null');
-        }
-        $this->container['app'] = $app;
-
-        return $this;
-    }
 
     /**
      * Gets provider_model
@@ -372,33 +328,6 @@ class TransactionApplicationRequest implements ModelInterface, ArrayAccess, Json
             throw new InvalidArgumentException('non-nullable provider cannot be null');
         }
         $this->container['provider'] = $provider;
-
-        return $this;
-    }
-
-    /**
-     * Gets policy_bindings
-     *
-     * @return \AuthentikApi\NextGen\Model\TransactionPolicyBindingRequest[]|null
-     */
-    public function getPolicyBindings(): ?array
-    {
-        return $this->container['policy_bindings'];
-    }
-
-    /**
-     * Sets policy_bindings
-     *
-     * @param \AuthentikApi\NextGen\Model\TransactionPolicyBindingRequest[]|null $policy_bindings policy_bindings
-     *
-     * @return $this
-     */
-    public function setPolicyBindings(?array $policy_bindings): static
-    {
-        if (is_null($policy_bindings)) {
-            throw new InvalidArgumentException('non-nullable policy_bindings cannot be null');
-        }
-        $this->container['policy_bindings'] = $policy_bindings;
 
         return $this;
     }

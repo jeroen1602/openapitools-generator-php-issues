@@ -16,3 +16,5 @@ docker run --rm --user "$UID:$(id -g)" \
     -g php \
     -c /local/generate-old.json \
     -o /local/"$DIR"/
+
+rm -rf "$DIR/test" "$DIR/docs"

@@ -79,15 +79,6 @@ class TransactionApplicationRequestTest extends TestCase
     }
 
     /**
-     * Test attribute "app"
-     */
-    public function testPropertyApp()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "provider_model"
      */
     public function testPropertyProviderModel()
@@ -100,15 +91,6 @@ class TransactionApplicationRequestTest extends TestCase
      * Test attribute "provider"
      */
     public function testPropertyProvider()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "policy_bindings"
-     */
-    public function testPropertyPolicyBindings()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

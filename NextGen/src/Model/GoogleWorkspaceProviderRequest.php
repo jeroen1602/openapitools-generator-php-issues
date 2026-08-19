@@ -60,20 +60,7 @@ class GoogleWorkspaceProviderRequest implements ModelInterface, ArrayAccess, Jso
      * @var array<string, string>
      */
     protected static array $openAPITypes = [
-        'name' => 'string',
-        'property_mappings' => 'string[]',
-        'property_mappings_group' => 'string[]',
-        'delegated_subject' => 'string',
-        'credentials' => 'array<string,mixed>',
-        'scopes' => 'string',
-        'exclude_users_service_account' => 'bool',
-        'filter_group' => 'string',
-        'user_delete_action' => '\AuthentikApi\NextGen\Model\OutgoingSyncDeleteAction',
-        'group_delete_action' => '\AuthentikApi\NextGen\Model\OutgoingSyncDeleteAction',
-        'default_group_email_domain' => 'string',
-        'sync_page_size' => 'int',
-        'sync_page_timeout' => 'string',
-        'dry_run' => 'bool'
+        'name' => 'string'
     ];
 
     /**
@@ -82,20 +69,7 @@ class GoogleWorkspaceProviderRequest implements ModelInterface, ArrayAccess, Jso
      * @var array<string, string|null>
      */
     protected static array $openAPIFormats = [
-        'name' => null,
-        'property_mappings' => 'uuid',
-        'property_mappings_group' => 'uuid',
-        'delegated_subject' => 'email',
-        'credentials' => null,
-        'scopes' => null,
-        'exclude_users_service_account' => null,
-        'filter_group' => 'uuid',
-        'user_delete_action' => null,
-        'group_delete_action' => null,
-        'default_group_email_domain' => null,
-        'sync_page_size' => null,
-        'sync_page_timeout' => null,
-        'dry_run' => null
+        'name' => null
     ];
 
     /**
@@ -104,20 +78,7 @@ class GoogleWorkspaceProviderRequest implements ModelInterface, ArrayAccess, Jso
      * @var array<string, bool>
      */
     protected static array $openAPINullables = [
-        'name' => false,
-        'property_mappings' => false,
-        'property_mappings_group' => false,
-        'delegated_subject' => false,
-        'credentials' => false,
-        'scopes' => false,
-        'exclude_users_service_account' => false,
-        'filter_group' => true,
-        'user_delete_action' => false,
-        'group_delete_action' => false,
-        'default_group_email_domain' => false,
-        'sync_page_size' => false,
-        'sync_page_timeout' => false,
-        'dry_run' => false
+        'name' => false
     ];
 
     /**
@@ -196,20 +157,7 @@ class GoogleWorkspaceProviderRequest implements ModelInterface, ArrayAccess, Jso
      * @var array<string, string>
      */
     protected static array $attributeMap = [
-        'name' => 'name',
-        'property_mappings' => 'property_mappings',
-        'property_mappings_group' => 'property_mappings_group',
-        'delegated_subject' => 'delegated_subject',
-        'credentials' => 'credentials',
-        'scopes' => 'scopes',
-        'exclude_users_service_account' => 'exclude_users_service_account',
-        'filter_group' => 'filter_group',
-        'user_delete_action' => 'user_delete_action',
-        'group_delete_action' => 'group_delete_action',
-        'default_group_email_domain' => 'default_group_email_domain',
-        'sync_page_size' => 'sync_page_size',
-        'sync_page_timeout' => 'sync_page_timeout',
-        'dry_run' => 'dry_run'
+        'name' => 'name'
     ];
 
     /**
@@ -218,20 +166,7 @@ class GoogleWorkspaceProviderRequest implements ModelInterface, ArrayAccess, Jso
      * @var array<string, string>
      */
     protected static array $setters = [
-        'name' => 'setName',
-        'property_mappings' => 'setPropertyMappings',
-        'property_mappings_group' => 'setPropertyMappingsGroup',
-        'delegated_subject' => 'setDelegatedSubject',
-        'credentials' => 'setCredentials',
-        'scopes' => 'setScopes',
-        'exclude_users_service_account' => 'setExcludeUsersServiceAccount',
-        'filter_group' => 'setFilterGroup',
-        'user_delete_action' => 'setUserDeleteAction',
-        'group_delete_action' => 'setGroupDeleteAction',
-        'default_group_email_domain' => 'setDefaultGroupEmailDomain',
-        'sync_page_size' => 'setSyncPageSize',
-        'sync_page_timeout' => 'setSyncPageTimeout',
-        'dry_run' => 'setDryRun'
+        'name' => 'setName'
     ];
 
     /**
@@ -240,20 +175,7 @@ class GoogleWorkspaceProviderRequest implements ModelInterface, ArrayAccess, Jso
      * @var array<string, string>
      */
     protected static array $getters = [
-        'name' => 'getName',
-        'property_mappings' => 'getPropertyMappings',
-        'property_mappings_group' => 'getPropertyMappingsGroup',
-        'delegated_subject' => 'getDelegatedSubject',
-        'credentials' => 'getCredentials',
-        'scopes' => 'getScopes',
-        'exclude_users_service_account' => 'getExcludeUsersServiceAccount',
-        'filter_group' => 'getFilterGroup',
-        'user_delete_action' => 'getUserDeleteAction',
-        'group_delete_action' => 'getGroupDeleteAction',
-        'default_group_email_domain' => 'getDefaultGroupEmailDomain',
-        'sync_page_size' => 'getSyncPageSize',
-        'sync_page_timeout' => 'getSyncPageTimeout',
-        'dry_run' => 'getDryRun'
+        'name' => 'getName'
     ];
 
     /**
@@ -304,19 +226,6 @@ class GoogleWorkspaceProviderRequest implements ModelInterface, ArrayAccess, Jso
     public function __construct(?array $data = null)
     {
         $this->setIfExists('name', $data ?? [], null);
-        $this->setIfExists('property_mappings', $data ?? [], null);
-        $this->setIfExists('property_mappings_group', $data ?? [], null);
-        $this->setIfExists('delegated_subject', $data ?? [], null);
-        $this->setIfExists('credentials', $data ?? [], null);
-        $this->setIfExists('scopes', $data ?? [], null);
-        $this->setIfExists('exclude_users_service_account', $data ?? [], null);
-        $this->setIfExists('filter_group', $data ?? [], null);
-        $this->setIfExists('user_delete_action', $data ?? [], null);
-        $this->setIfExists('group_delete_action', $data ?? [], null);
-        $this->setIfExists('default_group_email_domain', $data ?? [], null);
-        $this->setIfExists('sync_page_size', $data ?? [], null);
-        $this->setIfExists('sync_page_timeout', $data ?? [], null);
-        $this->setIfExists('dry_run', $data ?? [], null);
     }
 
     /**
@@ -349,43 +258,6 @@ class GoogleWorkspaceProviderRequest implements ModelInterface, ArrayAccess, Jso
         }
         if ((mb_strlen($this->container['name']) < 1)) {
             $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
-        }
-
-        if ($this->container['delegated_subject'] === null) {
-            $invalidProperties[] = "'delegated_subject' can't be null";
-        }
-        if ((mb_strlen($this->container['delegated_subject']) > 254)) {
-            $invalidProperties[] = "invalid value for 'delegated_subject', the character length must be smaller than or equal to 254.";
-        }
-
-        if ((mb_strlen($this->container['delegated_subject']) < 1)) {
-            $invalidProperties[] = "invalid value for 'delegated_subject', the character length must be bigger than or equal to 1.";
-        }
-
-        if ($this->container['credentials'] === null) {
-            $invalidProperties[] = "'credentials' can't be null";
-        }
-        if (!is_null($this->container['scopes']) && (mb_strlen($this->container['scopes']) < 1)) {
-            $invalidProperties[] = "invalid value for 'scopes', the character length must be bigger than or equal to 1.";
-        }
-
-        if ($this->container['default_group_email_domain'] === null) {
-            $invalidProperties[] = "'default_group_email_domain' can't be null";
-        }
-        if ((mb_strlen($this->container['default_group_email_domain']) < 1)) {
-            $invalidProperties[] = "invalid value for 'default_group_email_domain', the character length must be bigger than or equal to 1.";
-        }
-
-        if (!is_null($this->container['sync_page_size']) && ($this->container['sync_page_size'] > 2147483647)) {
-            $invalidProperties[] = "invalid value for 'sync_page_size', must be smaller than or equal to 2147483647.";
-        }
-
-        if (!is_null($this->container['sync_page_size']) && ($this->container['sync_page_size'] < 1)) {
-            $invalidProperties[] = "invalid value for 'sync_page_size', must be bigger than or equal to 1.";
-        }
-
-        if (!is_null($this->container['sync_page_timeout']) && (mb_strlen($this->container['sync_page_timeout']) < 1)) {
-            $invalidProperties[] = "invalid value for 'sync_page_timeout', the character length must be bigger than or equal to 1.";
         }
 
         return $invalidProperties;
@@ -428,394 +300,6 @@ class GoogleWorkspaceProviderRequest implements ModelInterface, ArrayAccess, Jso
         }
 
         $this->container['name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * Gets property_mappings
-     *
-     * @return string[]|null
-     */
-    public function getPropertyMappings(): ?array
-    {
-        return $this->container['property_mappings'];
-    }
-
-    /**
-     * Sets property_mappings
-     *
-     * @param string[]|null $property_mappings property_mappings
-     *
-     * @return $this
-     */
-    public function setPropertyMappings(?array $property_mappings): static
-    {
-        if (is_null($property_mappings)) {
-            throw new InvalidArgumentException('non-nullable property_mappings cannot be null');
-        }
-        $this->container['property_mappings'] = $property_mappings;
-
-        return $this;
-    }
-
-    /**
-     * Gets property_mappings_group
-     *
-     * @return string[]|null
-     */
-    public function getPropertyMappingsGroup(): ?array
-    {
-        return $this->container['property_mappings_group'];
-    }
-
-    /**
-     * Sets property_mappings_group
-     *
-     * @param string[]|null $property_mappings_group Property mappings used for group creation/updating.
-     *
-     * @return $this
-     */
-    public function setPropertyMappingsGroup(?array $property_mappings_group): static
-    {
-        if (is_null($property_mappings_group)) {
-            throw new InvalidArgumentException('non-nullable property_mappings_group cannot be null');
-        }
-        $this->container['property_mappings_group'] = $property_mappings_group;
-
-        return $this;
-    }
-
-    /**
-     * Gets delegated_subject
-     *
-     * @return string
-     */
-    public function getDelegatedSubject(): string
-    {
-        return $this->container['delegated_subject'];
-    }
-
-    /**
-     * Sets delegated_subject
-     *
-     * @param string $delegated_subject delegated_subject
-     *
-     * @return $this
-     */
-    public function setDelegatedSubject(string $delegated_subject): static
-    {
-        if (is_null($delegated_subject)) {
-            throw new InvalidArgumentException('non-nullable delegated_subject cannot be null');
-        }
-        if ((mb_strlen($delegated_subject) > 254)) {
-            throw new InvalidArgumentException('invalid length for $delegated_subject when calling GoogleWorkspaceProviderRequest., must be smaller than or equal to 254.');
-        }
-        if ((mb_strlen($delegated_subject) < 1)) {
-            throw new InvalidArgumentException('invalid length for $delegated_subject when calling GoogleWorkspaceProviderRequest., must be bigger than or equal to 1.');
-        }
-
-        $this->container['delegated_subject'] = $delegated_subject;
-
-        return $this;
-    }
-
-    /**
-     * Gets credentials
-     *
-     * @return array<string,mixed>
-     */
-    public function getCredentials(): array
-    {
-        return $this->container['credentials'];
-    }
-
-    /**
-     * Sets credentials
-     *
-     * @param array<string,mixed> $credentials credentials
-     *
-     * @return $this
-     */
-    public function setCredentials(array $credentials): static
-    {
-        if (is_null($credentials)) {
-            throw new InvalidArgumentException('non-nullable credentials cannot be null');
-        }
-        $this->container['credentials'] = $credentials;
-
-        return $this;
-    }
-
-    /**
-     * Gets scopes
-     *
-     * @return string|null
-     */
-    public function getScopes(): ?string
-    {
-        return $this->container['scopes'];
-    }
-
-    /**
-     * Sets scopes
-     *
-     * @param string|null $scopes scopes
-     *
-     * @return $this
-     */
-    public function setScopes(?string $scopes): static
-    {
-        if (is_null($scopes)) {
-            throw new InvalidArgumentException('non-nullable scopes cannot be null');
-        }
-
-        if ((mb_strlen($scopes) < 1)) {
-            throw new InvalidArgumentException('invalid length for $scopes when calling GoogleWorkspaceProviderRequest., must be bigger than or equal to 1.');
-        }
-
-        $this->container['scopes'] = $scopes;
-
-        return $this;
-    }
-
-    /**
-     * Gets exclude_users_service_account
-     *
-     * @return bool|null
-     */
-    public function getExcludeUsersServiceAccount(): ?bool
-    {
-        return $this->container['exclude_users_service_account'];
-    }
-
-    /**
-     * Sets exclude_users_service_account
-     *
-     * @param bool|null $exclude_users_service_account exclude_users_service_account
-     *
-     * @return $this
-     */
-    public function setExcludeUsersServiceAccount(?bool $exclude_users_service_account): static
-    {
-        if (is_null($exclude_users_service_account)) {
-            throw new InvalidArgumentException('non-nullable exclude_users_service_account cannot be null');
-        }
-        $this->container['exclude_users_service_account'] = $exclude_users_service_account;
-
-        return $this;
-    }
-
-    /**
-     * Gets filter_group
-     *
-     * @return string|null
-     */
-    public function getFilterGroup(): ?string
-    {
-        return $this->container['filter_group'];
-    }
-
-    /**
-     * Sets filter_group
-     *
-     * @param string|null $filter_group filter_group
-     *
-     * @return $this
-     */
-    public function setFilterGroup(?string $filter_group): static
-    {
-        if (is_null($filter_group)) {
-            array_push($this->openAPINullablesSetToNull, 'filter_group');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('filter_group', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
-        }
-        $this->container['filter_group'] = $filter_group;
-
-        return $this;
-    }
-
-    /**
-     * Gets user_delete_action
-     *
-     * @return \AuthentikApi\NextGen\Model\OutgoingSyncDeleteAction|null
-     */
-    public function getUserDeleteAction(): ?\AuthentikApi\NextGen\Model\OutgoingSyncDeleteAction
-    {
-        return $this->container['user_delete_action'];
-    }
-
-    /**
-     * Sets user_delete_action
-     *
-     * @param \AuthentikApi\NextGen\Model\OutgoingSyncDeleteAction|null $user_delete_action user_delete_action
-     *
-     * @return $this
-     */
-    public function setUserDeleteAction(?\AuthentikApi\NextGen\Model\OutgoingSyncDeleteAction $user_delete_action): static
-    {
-        if (is_null($user_delete_action)) {
-            throw new InvalidArgumentException('non-nullable user_delete_action cannot be null');
-        }
-        $this->container['user_delete_action'] = $user_delete_action;
-
-        return $this;
-    }
-
-    /**
-     * Gets group_delete_action
-     *
-     * @return \AuthentikApi\NextGen\Model\OutgoingSyncDeleteAction|null
-     */
-    public function getGroupDeleteAction(): ?\AuthentikApi\NextGen\Model\OutgoingSyncDeleteAction
-    {
-        return $this->container['group_delete_action'];
-    }
-
-    /**
-     * Sets group_delete_action
-     *
-     * @param \AuthentikApi\NextGen\Model\OutgoingSyncDeleteAction|null $group_delete_action group_delete_action
-     *
-     * @return $this
-     */
-    public function setGroupDeleteAction(?\AuthentikApi\NextGen\Model\OutgoingSyncDeleteAction $group_delete_action): static
-    {
-        if (is_null($group_delete_action)) {
-            throw new InvalidArgumentException('non-nullable group_delete_action cannot be null');
-        }
-        $this->container['group_delete_action'] = $group_delete_action;
-
-        return $this;
-    }
-
-    /**
-     * Gets default_group_email_domain
-     *
-     * @return string
-     */
-    public function getDefaultGroupEmailDomain(): string
-    {
-        return $this->container['default_group_email_domain'];
-    }
-
-    /**
-     * Sets default_group_email_domain
-     *
-     * @param string $default_group_email_domain default_group_email_domain
-     *
-     * @return $this
-     */
-    public function setDefaultGroupEmailDomain(string $default_group_email_domain): static
-    {
-        if (is_null($default_group_email_domain)) {
-            throw new InvalidArgumentException('non-nullable default_group_email_domain cannot be null');
-        }
-
-        if ((mb_strlen($default_group_email_domain) < 1)) {
-            throw new InvalidArgumentException('invalid length for $default_group_email_domain when calling GoogleWorkspaceProviderRequest., must be bigger than or equal to 1.');
-        }
-
-        $this->container['default_group_email_domain'] = $default_group_email_domain;
-
-        return $this;
-    }
-
-    /**
-     * Gets sync_page_size
-     *
-     * @return int|null
-     */
-    public function getSyncPageSize(): ?int
-    {
-        return $this->container['sync_page_size'];
-    }
-
-    /**
-     * Sets sync_page_size
-     *
-     * @param int|null $sync_page_size Controls the number of objects synced in a single task
-     *
-     * @return $this
-     */
-    public function setSyncPageSize(?int $sync_page_size): static
-    {
-        if (is_null($sync_page_size)) {
-            throw new InvalidArgumentException('non-nullable sync_page_size cannot be null');
-        }
-
-        if (($sync_page_size > 2147483647)) {
-            throw new InvalidArgumentException('invalid value for $sync_page_size when calling GoogleWorkspaceProviderRequest., must be smaller than or equal to 2147483647.');
-        }
-        if (($sync_page_size < 1)) {
-            throw new InvalidArgumentException('invalid value for $sync_page_size when calling GoogleWorkspaceProviderRequest., must be bigger than or equal to 1.');
-        }
-
-        $this->container['sync_page_size'] = $sync_page_size;
-
-        return $this;
-    }
-
-    /**
-     * Gets sync_page_timeout
-     *
-     * @return string|null
-     */
-    public function getSyncPageTimeout(): ?string
-    {
-        return $this->container['sync_page_timeout'];
-    }
-
-    /**
-     * Sets sync_page_timeout
-     *
-     * @param string|null $sync_page_timeout Timeout for synchronization of a single page
-     *
-     * @return $this
-     */
-    public function setSyncPageTimeout(?string $sync_page_timeout): static
-    {
-        if (is_null($sync_page_timeout)) {
-            throw new InvalidArgumentException('non-nullable sync_page_timeout cannot be null');
-        }
-
-        if ((mb_strlen($sync_page_timeout) < 1)) {
-            throw new InvalidArgumentException('invalid length for $sync_page_timeout when calling GoogleWorkspaceProviderRequest., must be bigger than or equal to 1.');
-        }
-
-        $this->container['sync_page_timeout'] = $sync_page_timeout;
-
-        return $this;
-    }
-
-    /**
-     * Gets dry_run
-     *
-     * @return bool|null
-     */
-    public function getDryRun(): ?bool
-    {
-        return $this->container['dry_run'];
-    }
-
-    /**
-     * Sets dry_run
-     *
-     * @param bool|null $dry_run When enabled, provider will not modify or create objects in the remote system.
-     *
-     * @return $this
-     */
-    public function setDryRun(?bool $dry_run): static
-    {
-        if (is_null($dry_run)) {
-            throw new InvalidArgumentException('non-nullable dry_run cannot be null');
-        }
-        $this->container['dry_run'] = $dry_run;
 
         return $this;
     }

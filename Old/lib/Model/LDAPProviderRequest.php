@@ -59,19 +59,7 @@ class LDAPProviderRequest implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $openAPITypes = [
-        'name' => 'string',
-        'authentication_flow' => 'string',
-        'authorization_flow' => 'string',
-        'invalidation_flow' => 'string',
-        'property_mappings' => 'string[]',
-        'base_dn' => 'string',
-        'certificate' => 'string',
-        'tls_server_name' => 'string',
-        'uid_start_number' => 'int',
-        'gid_start_number' => 'int',
-        'search_mode' => '\AuthentikApi\Old\Model\LDAPAPIAccessMode',
-        'bind_mode' => '\AuthentikApi\Old\Model\LDAPAPIAccessMode',
-        'mfa_support' => 'bool'
+        'name' => 'string'
     ];
 
     /**
@@ -82,19 +70,7 @@ class LDAPProviderRequest implements ModelInterface, ArrayAccess, \JsonSerializa
      * @psalm-var array<string, string|null>
      */
     protected static $openAPIFormats = [
-        'name' => null,
-        'authentication_flow' => 'uuid',
-        'authorization_flow' => 'uuid',
-        'invalidation_flow' => 'uuid',
-        'property_mappings' => 'uuid',
-        'base_dn' => null,
-        'certificate' => 'uuid',
-        'tls_server_name' => null,
-        'uid_start_number' => null,
-        'gid_start_number' => null,
-        'search_mode' => null,
-        'bind_mode' => null,
-        'mfa_support' => null
+        'name' => null
     ];
 
     /**
@@ -103,19 +79,7 @@ class LDAPProviderRequest implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var boolean[]
      */
     protected static array $openAPINullables = [
-        'name' => false,
-        'authentication_flow' => true,
-        'authorization_flow' => false,
-        'invalidation_flow' => false,
-        'property_mappings' => false,
-        'base_dn' => false,
-        'certificate' => true,
-        'tls_server_name' => false,
-        'uid_start_number' => false,
-        'gid_start_number' => false,
-        'search_mode' => false,
-        'bind_mode' => false,
-        'mfa_support' => false
+        'name' => false
     ];
 
     /**
@@ -204,19 +168,7 @@ class LDAPProviderRequest implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $attributeMap = [
-        'name' => 'name',
-        'authentication_flow' => 'authentication_flow',
-        'authorization_flow' => 'authorization_flow',
-        'invalidation_flow' => 'invalidation_flow',
-        'property_mappings' => 'property_mappings',
-        'base_dn' => 'base_dn',
-        'certificate' => 'certificate',
-        'tls_server_name' => 'tls_server_name',
-        'uid_start_number' => 'uid_start_number',
-        'gid_start_number' => 'gid_start_number',
-        'search_mode' => 'search_mode',
-        'bind_mode' => 'bind_mode',
-        'mfa_support' => 'mfa_support'
+        'name' => 'name'
     ];
 
     /**
@@ -225,19 +177,7 @@ class LDAPProviderRequest implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $setters = [
-        'name' => 'setName',
-        'authentication_flow' => 'setAuthenticationFlow',
-        'authorization_flow' => 'setAuthorizationFlow',
-        'invalidation_flow' => 'setInvalidationFlow',
-        'property_mappings' => 'setPropertyMappings',
-        'base_dn' => 'setBaseDn',
-        'certificate' => 'setCertificate',
-        'tls_server_name' => 'setTlsServerName',
-        'uid_start_number' => 'setUidStartNumber',
-        'gid_start_number' => 'setGidStartNumber',
-        'search_mode' => 'setSearchMode',
-        'bind_mode' => 'setBindMode',
-        'mfa_support' => 'setMfaSupport'
+        'name' => 'setName'
     ];
 
     /**
@@ -246,19 +186,7 @@ class LDAPProviderRequest implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $getters = [
-        'name' => 'getName',
-        'authentication_flow' => 'getAuthenticationFlow',
-        'authorization_flow' => 'getAuthorizationFlow',
-        'invalidation_flow' => 'getInvalidationFlow',
-        'property_mappings' => 'getPropertyMappings',
-        'base_dn' => 'getBaseDn',
-        'certificate' => 'getCertificate',
-        'tls_server_name' => 'getTlsServerName',
-        'uid_start_number' => 'getUidStartNumber',
-        'gid_start_number' => 'getGidStartNumber',
-        'search_mode' => 'getSearchMode',
-        'bind_mode' => 'getBindMode',
-        'mfa_support' => 'getMfaSupport'
+        'name' => 'getName'
     ];
 
     /**
@@ -319,18 +247,6 @@ class LDAPProviderRequest implements ModelInterface, ArrayAccess, \JsonSerializa
     public function __construct(?array $data = null)
     {
         $this->setIfExists('name', $data ?? [], null);
-        $this->setIfExists('authentication_flow', $data ?? [], null);
-        $this->setIfExists('authorization_flow', $data ?? [], null);
-        $this->setIfExists('invalidation_flow', $data ?? [], null);
-        $this->setIfExists('property_mappings', $data ?? [], null);
-        $this->setIfExists('base_dn', $data ?? [], null);
-        $this->setIfExists('certificate', $data ?? [], null);
-        $this->setIfExists('tls_server_name', $data ?? [], null);
-        $this->setIfExists('uid_start_number', $data ?? [], null);
-        $this->setIfExists('gid_start_number', $data ?? [], null);
-        $this->setIfExists('search_mode', $data ?? [], null);
-        $this->setIfExists('bind_mode', $data ?? [], null);
-        $this->setIfExists('mfa_support', $data ?? [], null);
     }
 
     /**
@@ -365,32 +281,6 @@ class LDAPProviderRequest implements ModelInterface, ArrayAccess, \JsonSerializa
         }
         if ((mb_strlen($this->container['name']) < 1)) {
             $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
-        }
-
-        if ($this->container['authorization_flow'] === null) {
-            $invalidProperties[] = "'authorization_flow' can't be null";
-        }
-        if ($this->container['invalidation_flow'] === null) {
-            $invalidProperties[] = "'invalidation_flow' can't be null";
-        }
-        if (!is_null($this->container['base_dn']) && (mb_strlen($this->container['base_dn']) < 1)) {
-            $invalidProperties[] = "invalid value for 'base_dn', the character length must be bigger than or equal to 1.";
-        }
-
-        if (!is_null($this->container['uid_start_number']) && ($this->container['uid_start_number'] > 2147483647)) {
-            $invalidProperties[] = "invalid value for 'uid_start_number', must be smaller than or equal to 2147483647.";
-        }
-
-        if (!is_null($this->container['uid_start_number']) && ($this->container['uid_start_number'] < -2147483648)) {
-            $invalidProperties[] = "invalid value for 'uid_start_number', must be bigger than or equal to -2147483648.";
-        }
-
-        if (!is_null($this->container['gid_start_number']) && ($this->container['gid_start_number'] > 2147483647)) {
-            $invalidProperties[] = "invalid value for 'gid_start_number', must be smaller than or equal to 2147483647.";
-        }
-
-        if (!is_null($this->container['gid_start_number']) && ($this->container['gid_start_number'] < -2147483648)) {
-            $invalidProperties[] = "invalid value for 'gid_start_number', must be bigger than or equal to -2147483648.";
         }
 
         return $invalidProperties;
@@ -436,365 +326,6 @@ class LDAPProviderRequest implements ModelInterface, ArrayAccess, \JsonSerializa
         }
 
         $this->container['name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * Gets authentication_flow
-     *
-     * @return string|null
-     */
-    public function getAuthenticationFlow()
-    {
-        return $this->container['authentication_flow'];
-    }
-
-    /**
-     * Sets authentication_flow
-     *
-     * @param string|null $authentication_flow Flow used for authentication when the associated application is accessed by an un-authenticated user.
-     *
-     * @return self
-     */
-    public function setAuthenticationFlow($authentication_flow)
-    {
-        if (is_null($authentication_flow)) {
-            array_push($this->openAPINullablesSetToNull, 'authentication_flow');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('authentication_flow', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
-        }
-        $this->container['authentication_flow'] = $authentication_flow;
-
-        return $this;
-    }
-
-    /**
-     * Gets authorization_flow
-     *
-     * @return string
-     */
-    public function getAuthorizationFlow()
-    {
-        return $this->container['authorization_flow'];
-    }
-
-    /**
-     * Sets authorization_flow
-     *
-     * @param string $authorization_flow Flow used when authorizing this provider.
-     *
-     * @return self
-     */
-    public function setAuthorizationFlow($authorization_flow)
-    {
-        if (is_null($authorization_flow)) {
-            throw new \InvalidArgumentException('non-nullable authorization_flow cannot be null');
-        }
-        $this->container['authorization_flow'] = $authorization_flow;
-
-        return $this;
-    }
-
-    /**
-     * Gets invalidation_flow
-     *
-     * @return string
-     */
-    public function getInvalidationFlow()
-    {
-        return $this->container['invalidation_flow'];
-    }
-
-    /**
-     * Sets invalidation_flow
-     *
-     * @param string $invalidation_flow Flow used ending the session from a provider.
-     *
-     * @return self
-     */
-    public function setInvalidationFlow($invalidation_flow)
-    {
-        if (is_null($invalidation_flow)) {
-            throw new \InvalidArgumentException('non-nullable invalidation_flow cannot be null');
-        }
-        $this->container['invalidation_flow'] = $invalidation_flow;
-
-        return $this;
-    }
-
-    /**
-     * Gets property_mappings
-     *
-     * @return string[]|null
-     */
-    public function getPropertyMappings()
-    {
-        return $this->container['property_mappings'];
-    }
-
-    /**
-     * Sets property_mappings
-     *
-     * @param string[]|null $property_mappings property_mappings
-     *
-     * @return self
-     */
-    public function setPropertyMappings($property_mappings)
-    {
-        if (is_null($property_mappings)) {
-            throw new \InvalidArgumentException('non-nullable property_mappings cannot be null');
-        }
-        $this->container['property_mappings'] = $property_mappings;
-
-        return $this;
-    }
-
-    /**
-     * Gets base_dn
-     *
-     * @return string|null
-     */
-    public function getBaseDn()
-    {
-        return $this->container['base_dn'];
-    }
-
-    /**
-     * Sets base_dn
-     *
-     * @param string|null $base_dn DN under which objects are accessible.
-     *
-     * @return self
-     */
-    public function setBaseDn($base_dn)
-    {
-        if (is_null($base_dn)) {
-            throw new \InvalidArgumentException('non-nullable base_dn cannot be null');
-        }
-
-        if ((mb_strlen($base_dn) < 1)) {
-            throw new \InvalidArgumentException('invalid length for $base_dn when calling LDAPProviderRequest., must be bigger than or equal to 1.');
-        }
-
-        $this->container['base_dn'] = $base_dn;
-
-        return $this;
-    }
-
-    /**
-     * Gets certificate
-     *
-     * @return string|null
-     */
-    public function getCertificate()
-    {
-        return $this->container['certificate'];
-    }
-
-    /**
-     * Sets certificate
-     *
-     * @param string|null $certificate certificate
-     *
-     * @return self
-     */
-    public function setCertificate($certificate)
-    {
-        if (is_null($certificate)) {
-            array_push($this->openAPINullablesSetToNull, 'certificate');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('certificate', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
-        }
-        $this->container['certificate'] = $certificate;
-
-        return $this;
-    }
-
-    /**
-     * Gets tls_server_name
-     *
-     * @return string|null
-     */
-    public function getTlsServerName()
-    {
-        return $this->container['tls_server_name'];
-    }
-
-    /**
-     * Sets tls_server_name
-     *
-     * @param string|null $tls_server_name tls_server_name
-     *
-     * @return self
-     */
-    public function setTlsServerName($tls_server_name)
-    {
-        if (is_null($tls_server_name)) {
-            throw new \InvalidArgumentException('non-nullable tls_server_name cannot be null');
-        }
-        $this->container['tls_server_name'] = $tls_server_name;
-
-        return $this;
-    }
-
-    /**
-     * Gets uid_start_number
-     *
-     * @return int|null
-     */
-    public function getUidStartNumber()
-    {
-        return $this->container['uid_start_number'];
-    }
-
-    /**
-     * Sets uid_start_number
-     *
-     * @param int|null $uid_start_number The start for uidNumbers, this number is added to the user.pk to make sure that the numbers aren't too low for POSIX users. Default is 2000 to ensure that we don't collide with local users uidNumber
-     *
-     * @return self
-     */
-    public function setUidStartNumber($uid_start_number)
-    {
-        if (is_null($uid_start_number)) {
-            throw new \InvalidArgumentException('non-nullable uid_start_number cannot be null');
-        }
-
-        if (($uid_start_number > 2147483647)) {
-            throw new \InvalidArgumentException('invalid value for $uid_start_number when calling LDAPProviderRequest., must be smaller than or equal to 2147483647.');
-        }
-        if (($uid_start_number < -2147483648)) {
-            throw new \InvalidArgumentException('invalid value for $uid_start_number when calling LDAPProviderRequest., must be bigger than or equal to -2147483648.');
-        }
-
-        $this->container['uid_start_number'] = $uid_start_number;
-
-        return $this;
-    }
-
-    /**
-     * Gets gid_start_number
-     *
-     * @return int|null
-     */
-    public function getGidStartNumber()
-    {
-        return $this->container['gid_start_number'];
-    }
-
-    /**
-     * Sets gid_start_number
-     *
-     * @param int|null $gid_start_number The start for gidNumbers, this number is added to a number generated from the group.pk to make sure that the numbers aren't too low for POSIX groups. Default is 4000 to ensure that we don't collide with local groups or users primary groups gidNumber
-     *
-     * @return self
-     */
-    public function setGidStartNumber($gid_start_number)
-    {
-        if (is_null($gid_start_number)) {
-            throw new \InvalidArgumentException('non-nullable gid_start_number cannot be null');
-        }
-
-        if (($gid_start_number > 2147483647)) {
-            throw new \InvalidArgumentException('invalid value for $gid_start_number when calling LDAPProviderRequest., must be smaller than or equal to 2147483647.');
-        }
-        if (($gid_start_number < -2147483648)) {
-            throw new \InvalidArgumentException('invalid value for $gid_start_number when calling LDAPProviderRequest., must be bigger than or equal to -2147483648.');
-        }
-
-        $this->container['gid_start_number'] = $gid_start_number;
-
-        return $this;
-    }
-
-    /**
-     * Gets search_mode
-     *
-     * @return \AuthentikApi\Old\Model\LDAPAPIAccessMode|null
-     */
-    public function getSearchMode()
-    {
-        return $this->container['search_mode'];
-    }
-
-    /**
-     * Sets search_mode
-     *
-     * @param \AuthentikApi\Old\Model\LDAPAPIAccessMode|null $search_mode search_mode
-     *
-     * @return self
-     */
-    public function setSearchMode($search_mode)
-    {
-        if (is_null($search_mode)) {
-            throw new \InvalidArgumentException('non-nullable search_mode cannot be null');
-        }
-        $this->container['search_mode'] = $search_mode;
-
-        return $this;
-    }
-
-    /**
-     * Gets bind_mode
-     *
-     * @return \AuthentikApi\Old\Model\LDAPAPIAccessMode|null
-     */
-    public function getBindMode()
-    {
-        return $this->container['bind_mode'];
-    }
-
-    /**
-     * Sets bind_mode
-     *
-     * @param \AuthentikApi\Old\Model\LDAPAPIAccessMode|null $bind_mode bind_mode
-     *
-     * @return self
-     */
-    public function setBindMode($bind_mode)
-    {
-        if (is_null($bind_mode)) {
-            throw new \InvalidArgumentException('non-nullable bind_mode cannot be null');
-        }
-        $this->container['bind_mode'] = $bind_mode;
-
-        return $this;
-    }
-
-    /**
-     * Gets mfa_support
-     *
-     * @return bool|null
-     */
-    public function getMfaSupport()
-    {
-        return $this->container['mfa_support'];
-    }
-
-    /**
-     * Sets mfa_support
-     *
-     * @param bool|null $mfa_support When enabled, code-based multi-factor authentication can be used by appending a semicolon and the TOTP code to the password. This should only be enabled if all users that will bind to this provider have a TOTP device configured, as otherwise a password may incorrectly be rejected if it contains a semicolon.
-     *
-     * @return self
-     */
-    public function setMfaSupport($mfa_support)
-    {
-        if (is_null($mfa_support)) {
-            throw new \InvalidArgumentException('non-nullable mfa_support cannot be null');
-        }
-        $this->container['mfa_support'] = $mfa_support;
 
         return $this;
     }

@@ -79,15 +79,6 @@ class UsedByTest extends TestCase
     }
 
     /**
-     * Test attribute "app"
-     */
-    public function testPropertyApp()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "model_name"
      */
     public function testPropertyModelName()
@@ -109,15 +100,6 @@ class UsedByTest extends TestCase
      * Test attribute "name"
      */
     public function testPropertyName()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "action"
-     */
-    public function testPropertyAction()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

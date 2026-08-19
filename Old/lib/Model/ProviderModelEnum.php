@@ -47,24 +47,6 @@ class ProviderModelEnum
 
     public const AUTHENTIK_PROVIDERS_LDAP_LDAPPROVIDER = 'authentik_providers_ldap.ldapprovider';
 
-    public const AUTHENTIK_PROVIDERS_MICROSOFT_ENTRA_MICROSOFTENTRAPROVIDER = 'authentik_providers_microsoft_entra.microsoftentraprovider';
-
-    public const AUTHENTIK_PROVIDERS_OAUTH2_OAUTH2PROVIDER = 'authentik_providers_oauth2.oauth2provider';
-
-    public const AUTHENTIK_PROVIDERS_PROXY_PROXYPROVIDER = 'authentik_providers_proxy.proxyprovider';
-
-    public const AUTHENTIK_PROVIDERS_RAC_RACPROVIDER = 'authentik_providers_rac.racprovider';
-
-    public const AUTHENTIK_PROVIDERS_RADIUS_RADIUSPROVIDER = 'authentik_providers_radius.radiusprovider';
-
-    public const AUTHENTIK_PROVIDERS_SAML_SAMLPROVIDER = 'authentik_providers_saml.samlprovider';
-
-    public const AUTHENTIK_PROVIDERS_SCIM_SCIMPROVIDER = 'authentik_providers_scim.scimprovider';
-
-    public const AUTHENTIK_PROVIDERS_SSF_SSFPROVIDER = 'authentik_providers_ssf.ssfprovider';
-
-    public const AUTHENTIK_PROVIDERS_WS_FEDERATION_WSFEDERATIONPROVIDER = 'authentik_providers_ws_federation.wsfederationprovider';
-
     /**
      * Gets allowable values of the enum
      * @return string[]
@@ -73,16 +55,7 @@ class ProviderModelEnum
     {
         return [
             self::AUTHENTIK_PROVIDERS_GOOGLE_WORKSPACE_GOOGLEWORKSPACEPROVIDER,
-            self::AUTHENTIK_PROVIDERS_LDAP_LDAPPROVIDER,
-            self::AUTHENTIK_PROVIDERS_MICROSOFT_ENTRA_MICROSOFTENTRAPROVIDER,
-            self::AUTHENTIK_PROVIDERS_OAUTH2_OAUTH2PROVIDER,
-            self::AUTHENTIK_PROVIDERS_PROXY_PROXYPROVIDER,
-            self::AUTHENTIK_PROVIDERS_RAC_RACPROVIDER,
-            self::AUTHENTIK_PROVIDERS_RADIUS_RADIUSPROVIDER,
-            self::AUTHENTIK_PROVIDERS_SAML_SAMLPROVIDER,
-            self::AUTHENTIK_PROVIDERS_SCIM_SCIMPROVIDER,
-            self::AUTHENTIK_PROVIDERS_SSF_SSFPROVIDER,
-            self::AUTHENTIK_PROVIDERS_WS_FEDERATION_WSFEDERATIONPROVIDER
+            self::AUTHENTIK_PROVIDERS_LDAP_LDAPPROVIDER
         ];
     }
 }
